@@ -29,17 +29,17 @@ Blogger (https://www.blogger.com/) is now more strict about using https and modi
       document.head.appendChild(el);
     }
     function externalScript(url, cb) {
-      var el = document.createElement(&#39;script&#39;);
+      var el = document.createElement(&quot;script&quot;);
       hook(el, cb);
-      el.type = &#39;text/javascript&#39;;
-      el.setAttribute(&#39;src&#39;, url);
+      el.type = &quot;text/javascript&quot;;
+      el.setAttribute(&quot;src&quot;, url);
       document.head.appendChild(el);
     }
-    var path = &#39;https://cdn.rawgit.com/dwhey/syntaxhighlighter/master/&#39;;
-    externalCss(path + &#39;shCore.css&#39;, function() {
-    externalCss(path + &#39;shThemeEclipse.css&#39;, function() {
-    externalScript(path + &#39;shCore.js&#39;, function() {
-    externalScript(path + &#39;shBrushJScript.js&#39;, function() {
+    var path = &quot;https://cdn.rawgit.com/dwhey/syntaxhighlighter/master/&quot;;
+    externalCss(path + &quot;shCore.css&quot;, function() {
+    externalCss(path + &quot;shThemeEclipse.css&quot;, function() {
+    externalScript(path + &quot;shCore.js&quot;, function() {
+    externalScript(path + &quot;shBrushJScript.js&quot;, function() {
       SyntaxHighlighter.config.bloggerMode = true;
       SyntaxHighlighter.all();
     })})})});
